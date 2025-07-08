@@ -1,6 +1,6 @@
 const educationHistory = [
-    { id: 1, period: '2022 - Sekarang', institution: 'Universitas Gadjah Mada', major: 'S1 - Teknik Informatika' },
-    { id: 2, period: '2019 - 2022', institution: 'SMA Negeri 1 Teladan Yogyakarta', major: 'MIPA' }
+    { id: 1, period: '2023 - Sekarang', institution: 'Universitas Amikom Yogyakarta', major: 'S1 - Teknik Informatika', logo: '/images/amikom.png' },
+    { id: 2, period: '2019 - 2022', institution: 'SMKN 1 Padaherang', major: 'Rekayasa Perangkat Lunak', logo: '/images/smk.jpg' }
     ];
     const skills = [
         { name: 'Vue.js', level: 'Mahir' }, { name: 'JavaScript', level: 'Mahir' },
@@ -9,11 +9,8 @@ const educationHistory = [
         { name: 'Git & GitHub', level: 'Mahir' }, { name: 'HTML5 & CSS3', level: 'Mahir' },
         ];
         const projects = [
-            { title: 'Website Toko Online', image: 'https://via.placeholder.com/500x300?text=Proyek+1',
-            description: 'Platform e-commerce dengan fitur keranjang belanja.', tech: ['Vue.js', 'Express.js',
-            'PostgreSQL'], link: '#' },
-            { title: 'Aplikasi Manajemen Tugas', image: 'https://via.placeholder.com/500x300?text=Proyek+2',
-            description: 'Aplikasi untuk melacak progres tugas harian.', tech: ['React', 'Firebase'], link: '#' }
+            { title: 'Website Penjualan Tiket', image: '/images/Screenshot 2025-07-08 153204.png', description: 'Platform penjualan tiket event berbasis website.', tech: ['Vue.js', 'Laravel', 'MySQL'], link: '#' },
+            { title: 'Aplikasi Manajemen Tugas', image: '/images/istockphoto-1474840525-170667a.jpg', description: 'Aplikasi untuk melacak progres tugas harian.', tech: ['React', 'Firebase'], link: '#' }
             ];
             
 module.exports = { educationHistory, skills, projects };
