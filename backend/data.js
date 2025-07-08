@@ -9,8 +9,8 @@ const educationHistory = [
         { name: 'Git & GitHub', level: 'Mahir' }, { name: 'HTML5 & CSS3', level: 'Mahir' },
         ];
         const projects = [
-            { title: 'Website Penjualan Tiket', image: '/images/Screenshot 2025-07-08 153204.png', description: 'Platform penjualan tiket event berbasis website.', tech: ['Vue.js', 'Laravel', 'MySQL'], link: '#' },
-            { title: 'Aplikasi Manajemen Tugas', image: '/images/istockphoto-1474840525-170667a.jpg', description: 'Aplikasi untuk melacak progres tugas harian.', tech: ['React', 'Firebase'], link: '#' }
+            { title: 'Website Penjualan Tiket', image: '/images/demontix.png', description: 'Platform penjualan tiket event berbasis website.', tech: ['Vue.js', 'Laravel', 'MySQL'], link: '#' },
+            { title: 'Aplikasi Penjualan Peralatan Billiard', image: '/images/gearnine.png', description: 'Aplikasi e-commerce untuk membeli segala peralatan billiard.', tech: ['Java', 'Dart'], link: '#' }
             ];
             
 module.exports = { educationHistory, skills, projects };
