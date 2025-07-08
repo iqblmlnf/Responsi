@@ -24,6 +24,8 @@ const getTechColor = (tech) => {
     React: 'bg-sky-100 text-sky-700',
     Firebase: 'bg-yellow-100 text-yellow-700',
     Tailwind: 'bg-teal-100 text-teal-700',
+    Java: 'bg-red-100 text-red-700',
+    Dart: 'bg-blue-100 text-blue-700',
   }
   return map[tech] || 'bg-gray-100 text-gray-700'
 }
