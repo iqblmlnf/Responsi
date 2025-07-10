@@ -30,11 +30,11 @@ const observe = (el, id) => {
 </script>
 
 <template>
-  <section id="pendidikan" class="py-20 bg-gradient-to-b from-white via-indigo-50 to-white">
+  <section id="pendidikan" class="py-20 bg-[#F8F5F1] scroll-mt-28">
     <div class="container mx-auto px-6">
       <SectionTitle title="Riwayat Pendidikan" />
       <div class="relative">
-        <div class="absolute h-full border-r-4 border-indigo-200 left-1/2 transform -translate-x-1/2"></div>
+        <div class="absolute h-full border-r-4 border-[#D9D9D9] left-1/2 transform -translate-x-1/2"></div>
         <div
           v-for="(edu, index) in educationHistory"
           :key="edu.id"
@@ -42,8 +42,8 @@ const observe = (el, id) => {
         >
           <div v-if="index % 2 === 0" class="w-full flex">
             <div class="w-1/2 pr-8 text-right">
-              <div class="bg-white border border-indigo-100 shadow-md rounded-xl p-5 inline-block text-left">
-                <p class="text-indigo-600 font-semibold">{{ edu.period }}</p>
+              <div class="bg-white border border-[#E3DBD2] shadow-md rounded-xl p-5 inline-block text-left">
+                <p class="text-[#72383D] font-semibold">{{ edu.period }}</p>
                 <div class="flex justify-end items-center gap-2 mt-1">
                   <img
                     v-if="edu.logo"
@@ -56,22 +56,22 @@ const observe = (el, id) => {
                       'opacity-100 translate-y-0': visibleLogos[edu.id],
                     }"
                   />
-                  <h3 class="text-xl font-bold text-gray-800">{{ edu.institution }}</h3>
+                  <h3 class="text-xl font-bold text-[#322D29]">{{ edu.institution }}</h3>
                 </div>
-                <p class="text-gray-600 mt-1">{{ edu.major }}</p>
+                <p class="text-[#AC9C8D] mt-1">{{ edu.major }}</p>
               </div>
             </div>
             <div class="w-1/2 flex justify-start">
-              <div class="w-4 h-4 bg-indigo-600 rounded-full z-10"></div>
+              <div class="w-4 h-4 bg-[#72383D] rounded-full z-10"></div>
             </div>
           </div>
           <div v-else class="w-full flex">
             <div class="w-1/2 flex justify-end">
-              <div class="w-4 h-4 bg-indigo-600 rounded-full z-10"></div>
+              <div class="w-4 h-4 bg-[#72383D] rounded-full z-10"></div>
             </div>
             <div class="w-1/2 pl-8 text-left">
-              <div class="bg-white border border-indigo-100 shadow-md rounded-xl p-5 inline-block">
-                <p class="text-indigo-600 font-semibold">{{ edu.period }}</p>
+              <div class="bg-white border border-[#E3DBD2] shadow-md rounded-xl p-5 inline-block">
+                <p class="text-[#72383D] font-semibold">{{ edu.period }}</p>
                 <div class="flex items-center gap-2 mt-1">
                   <img
                     v-if="edu.logo"
@@ -84,9 +84,9 @@ const observe = (el, id) => {
                       'opacity-100 translate-y-0': visibleLogos[edu.id],
                     }"
                   />
-                  <h3 class="text-xl font-bold text-gray-800">{{ edu.institution }}</h3>
+                  <h3 class="text-xl font-bold text-[#322D29]">{{ edu.institution }}</h3>
                 </div>
-                <p class="text-gray-600 mt-1">{{ edu.major }}</p>
+                <p class="text-[#AC9C8D] mt-1">{{ edu.major }}</p>
               </div>
             </div>
           </div>
@@ -95,3 +95,4 @@ const observe = (el, id) => {
     </div>
   </section>
 </template>
+

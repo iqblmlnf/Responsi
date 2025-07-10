@@ -32,15 +32,15 @@ const getTechColor = (tech) => {
 </script>
 
 <template>
-  <section id="proyek" class="py-20 bg-gradient-to-b from-white via-blue-50 to-white">
+  <section id="proyek" class="py-20 bg-[#F5ECE2] scroll-mt-28">
     <div class="container mx-auto px-6">
-      <SectionTitle title="Proyek Unggulan" />
+      <SectionTitle title="Proyek Unggulan" textColor="text-[#322D29]" />
 
       <div class="grid md:grid-cols-2 gap-12 mt-10">
         <div
           v-for="project in projects"
           :key="project.title"
-          class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+          class="bg-white rounded-xl border border-[#D9D9D9] shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
         >
           <div class="overflow-hidden">
             <img
@@ -51,8 +51,8 @@ const getTechColor = (tech) => {
           </div>
 
           <div class="p-6">
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">{{ project.title }}</h3>
-            <p class="text-gray-600 mb-4">{{ project.description }}</p>
+            <h3 class="text-2xl font-bold text-[#322D29] mb-2">{{ project.title }}</h3>
+            <p class="text-[#72383D] mb-4">{{ project.description }}</p>
 
             <div class="mb-4">
               <span
@@ -69,7 +69,7 @@ const getTechColor = (tech) => {
               :href="project.link"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-block mt-2 text-indigo-600 font-semibold hover:underline"
+              class="inline-block mt-2 text-[#72383D] font-semibold hover:text-[#AC9C8D] transition"
             >
               Lihat Detail &rarr;
             </a>
