@@ -11,6 +11,4 @@ app.get('/api/education', (req, res) => res.json(educationHistory));
 app.get('/api/skills', (req, res) => res.json(skills));
 app.get('/api/projects', (req, res) => res.json(projects));
 
-// Jangan pakai app.listen()!
-// Ganti dengan export handler
-module.exports = app;
+module.exports = app; // ⛔️ JANGAN pakai app.listen()
