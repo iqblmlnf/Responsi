@@ -1,12 +1,18 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
   "rewrites": [
     {
-      "source": "/api/:match*",
+      "source": "/api/:path*",
       "destination": "/api/index.js"
     },
     {
-      "source": "/((?!api|_next|static|favicon.ico).*)",
+      "source": "/((?!api/|.*\\..*).*)",
       "destination": "/frontend/index.html"
     }
   ]

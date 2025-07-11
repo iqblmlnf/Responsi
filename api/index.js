@@ -1,10 +1,15 @@
-const express = require('express');
 const { educationHistory, skills, projects } = require('../backend/data');
-const app = express();
 
-app.get('/api/education', (req, res) => res.json(educationHistory));
-app.get('/api/skills', (req, res) => res.json(skills));
-app.get('/api/projects', (req, res) => res.json(projects));
+module.exports = (req, res) => {
+  const { url } = req;
 
-// HARUS: export sebagai handler untuk Vercel!
-module.exports = app;
+  if (url.endsWith('/education')) {
+    res.status(200).json(educationHistory);
+  } else if (url.endsWith('/skills')) {
+    res.status(200).json(skills);
+  } else if (url.endsWith('/projects')) {
+    res.status(200).json(projects);
+  } else {
+    res.status(404).send('Not Found');
+  }
+};
