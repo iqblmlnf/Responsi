@@ -1,15 +1,16 @@
-// const express = require('express');
-// const cors = require('cors');
-// const { educationHistory, skills, projects } = require('./data');
+const express = require('express');
+const cors = require('cors');
+const { educationHistory, skills, projects } = require('./data');
 
-// const app = express();
-// app.use(cors());
-// app.use(express.json());
+const app = express();
+const PORT = 3000;
 
-// app.get('/api/education', (req, res) => res.json(educationHistory));
-// app.get('/api/skills', (req, res) => res.json(skills));
-// app.get('/api/projects', (req, res) => res.json(projects));
+app.use(cors());
+app.use(express.json());
 
-// // ❌ JANGAN PAKAI: app.listen(...)
+app.get('/api/education', (req, res) => res.json(educationHistory));
+app.get('/api/skills', (req, res) => res.json(skills));
+app.get('/api/projects', (req, res) => res.json(projects));
 
-// module.exports = app; // ✅ ini yang dipakai oleh api/index.js
+app.listen(PORT, () => {
+console.log( 'Server backend berjalan di http://localhost:${PORT}'); });

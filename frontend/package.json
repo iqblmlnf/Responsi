@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "start": "vite preview",
+    "build": "vue-cli-service build",
     "serve": "vue-cli-service serve",
     "preview": "vite preview",
     "lint": "eslint . --fix",
