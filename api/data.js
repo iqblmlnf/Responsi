@@ -1,4 +1,4 @@
-const educationHistory = [
+export const educationHistory = [
   {
     id: 1,
     period: "2023 - Sekarang",
@@ -14,7 +14,7 @@ const educationHistory = [
     logo: "/images/smk.jpg",
   },
 ];
-const skills = [
+export const skills = [
   { name: "Vue.js", level: "Mahir" },
   { name: "JavaScript", level: "Mahir" },
   { name: "Tailwind CSS", level: "Mahir" },
@@ -24,7 +24,7 @@ const skills = [
   { name: "Git & GitHub", level: "Mahir" },
   { name: "HTML5 & CSS3", level: "Mahir" },
 ];
-const projects = [
+export const projects = [
   {
     title: "Website Penjualan Tiket",
     image: "/images/demontix.png",
