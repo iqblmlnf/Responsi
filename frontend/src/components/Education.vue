@@ -1,34 +1,3 @@
-<script setup>
-import { ref, onMounted } from 'vue'
-import axios from 'axios'
-import SectionTitle from './SectionTitle.vue'
-
-const educationHistory = ref([])
-const visibleLogos = ref({})
-
-onMounted(async () => {
-  try {
-    const response = await axios.get('http://localhost:3000/api/education')
-    educationHistory.value = response.data
-  } catch (error) {
-    console.error(error)
-  }
-})
-
-const observe = (el, id) => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      if (entries[0].isIntersecting) {
-        visibleLogos.value[id] = true
-        observer.unobserve(el)
-      }
-    },
-    { threshold: 0.3 }
-  )
-  observer.observe(el)
-}
-</script>
-
 <template>
   <section id="pendidikan" class="py-20 bg-[#F8F5F1] scroll-mt-28">
     <div class="container mx-auto px-6">
@@ -96,3 +65,21 @@ const observe = (el, id) => {
   </section>
 </template>
 
+<script setup>
+import axios from 'axios'
+import { ref, onMounted } from 'vue'
+import SectionTitle from './SectionTitle.vue'
+
+const educationHistory = ref([])
+
+onMounted(async () => {
+  try {
+    const response = await axios.get('/api/education')
+    educationHistory.value = response.data
+  } catch (error) {
+    console.error(error)
+  }
+})
+
+
+</script>

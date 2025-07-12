@@ -1,36 +1,3 @@
-<script setup>
-import { ref, onMounted } from 'vue'
-import axios from 'axios'
-import SectionTitle from './SectionTitle.vue'
-
-const projects = ref([])
-
-onMounted(async () => {
-  try {
-    const response = await axios.get('http://localhost:3000/api/projects')
-    projects.value = response.data
-  } catch (error) {
-    console.error(error)
-  }
-})
-
-const getTechColor = (tech) => {
-  const map = {
-    Vue: 'bg-green-100 text-green-700',
-    'Vue.js': 'bg-green-100 text-green-700',
-    Laravel: 'bg-red-100 text-red-700',
-    MySQL: 'bg-blue-100 text-blue-700',
-    PostgreSQL: 'bg-blue-100 text-blue-700',
-    React: 'bg-sky-100 text-sky-700',
-    Firebase: 'bg-yellow-100 text-yellow-700',
-    Tailwind: 'bg-teal-100 text-teal-700',
-    Java: 'bg-red-100 text-red-700',
-    Dart: 'bg-blue-100 text-blue-700',
-  }
-  return map[tech] || 'bg-gray-100 text-gray-700'
-}
-</script>
-
 <template>
   <section id="proyek" class="py-20 bg-[#F5ECE2] scroll-mt-28">
     <div class="container mx-auto px-6">
@@ -79,3 +46,19 @@ const getTechColor = (tech) => {
     </div>
   </section>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import axios from 'axios'
+import SectionTitle from './SectionTitle.vue'
+const projects = ref([])
+onMounted(async () => {
+  try {
+    const response = await axios.get('/api/projects');
+    projects.value = response.data;
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+</script>
