@@ -31,20 +31,26 @@ const observe = (el, id) => {
 
 <template>
   <section id="pendidikan" class="py-20 bg-[#F8F5F1] scroll-mt-28">
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-4 md:px-6">
       <SectionTitle title="Riwayat Pendidikan" />
       <div class="relative">
-        <div class="absolute h-full border-r-4 border-[#D9D9D9] left-1/2 transform -translate-x-1/2"></div>
+        <!-- Garis tengah -->
+        <div class="hidden md:block absolute h-full border-r-4 border-[#D9D9D9] left-1/2 transform -translate-x-1/2"></div>
+
         <div
           v-for="(edu, index) in educationHistory"
           :key="edu.id"
-          class="mb-12 flex justify-between items-center w-full"
+          class="mb-12 flex flex-col md:flex-row justify-between items-center w-full"
         >
-          <div v-if="index % 2 === 0" class="w-full flex">
-            <div class="w-1/2 pr-8 text-right">
+          <!-- Kiri -->
+          <div
+            v-if="index % 2 === 0"
+            class="flex w-full flex-col md:flex-row md:justify-between"
+          >
+            <div class="w-full md:w-1/2 md:pr-8 text-right md:text-right text-left mb-4 md:mb-0">
               <div class="bg-white border border-[#E3DBD2] shadow-md rounded-xl p-5 inline-block text-left">
                 <p class="text-[#72383D] font-semibold">{{ edu.period }}</p>
-                <div class="flex justify-end items-center gap-2 mt-1">
+                <div class="flex md:justify-end items-center gap-2 mt-1">
                   <img
                     v-if="edu.logo"
                     :ref="(el) => el && observe(el, edu.id)"
@@ -61,15 +67,20 @@ const observe = (el, id) => {
                 <p class="text-[#AC9C8D] mt-1">{{ edu.major }}</p>
               </div>
             </div>
-            <div class="w-1/2 flex justify-start">
+            <div class="w-full md:w-1/2 flex md:justify-start justify-center">
               <div class="w-4 h-4 bg-[#72383D] rounded-full z-10"></div>
             </div>
           </div>
-          <div v-else class="w-full flex">
-            <div class="w-1/2 flex justify-end">
+
+          <!-- Kanan -->
+          <div
+            v-else
+            class="flex w-full flex-col md:flex-row md:justify-between"
+          >
+            <div class="w-full md:w-1/2 flex md:justify-end justify-center mb-4 md:mb-0">
               <div class="w-4 h-4 bg-[#72383D] rounded-full z-10"></div>
             </div>
-            <div class="w-1/2 pl-8 text-left">
+            <div class="w-full md:w-1/2 md:pl-8 text-left">
               <div class="bg-white border border-[#E3DBD2] shadow-md rounded-xl p-5 inline-block">
                 <p class="text-[#72383D] font-semibold">{{ edu.period }}</p>
                 <div class="flex items-center gap-2 mt-1">
@@ -95,4 +106,3 @@ const observe = (el, id) => {
     </div>
   </section>
 </template>
-
