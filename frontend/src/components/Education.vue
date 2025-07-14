@@ -1,6 +1,6 @@
 <script setup>
-import { ref, onMounted } from 'vue'
 import axios from 'axios'
+import { ref, onMounted } from 'vue'
 import SectionTitle from './SectionTitle.vue'
 
 const educationHistory = ref([])
@@ -8,7 +8,7 @@ const visibleLogos = ref({})
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:3000/api/education')
+    const response = await axios.get('/api/education')
     educationHistory.value = response.data
   } catch (error) {
     console.error(error)
